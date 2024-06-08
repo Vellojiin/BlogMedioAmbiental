@@ -1,0 +1,279 @@
+:root{
+    --Principal:var(#3DC446);
+    --Secundario:var(#82F04A);
+    --Terciario:var(#4AF08E);
+    --Cuarto:var(#4af0c6);
+    --Terciario:var(#3DC4);
+    --Blanco:var(#fff);
+    --Negro:var(#000);
+    --FuenteP:var(font-family: 'Montserrat', sans-serif;);
+}
+
+/*GLOBALES*/
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+*, *:before, *:after { 
+        box-sizing: inherit; 
+    }
+
+span{
+    color: #3DC446;
+}
+
+body{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to top,white,)
+}
+
+p{
+    text-align: justify;
+}
+
+/*CABEZA*/
+
+.header-nav{
+    display: flex;
+    font-size: 2rem;
+    justify-content: end;
+    padding-bottom: 2rem;
+    margin-right: 2rem;
+}
+.header-img{
+    margin-top: 2rem;
+    display: flex;
+    height: 6rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    } 
+
+nav a{
+    padding: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: grey;
+}
+
+hr{
+    margin-top: rem;
+    margin-bottom: 5rem;
+}
+
+#home{
+    background-color: #3DC446;
+    border-radius: 1rem;
+    color: white;
+}
+
+/*MAIN*/
+
+.contenedor{
+    max-width: 110rem; /**CREO QUE ES PARA AJUSTAR LA BARRA DE NAVEGACION AL CENTRO**/
+    margin: 0 auto;
+}
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(71,71,71,0.61);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/*SECTION SLIDER*/
+
+
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 17s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+
+
+.slider h2{
+    position:absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    font-size: 4rem;
+    
+}
+
+.slider a{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    margin-top: 40rem;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.slider img {
+	width: 100%;
+    height: 50rem;
+    /*filter: brightness(50%);*/
+}
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+
+/*Articulo*/
+
+.contenedor-article h2{
+    margin-top: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenido-article{
+    display: flex;
+    
+}
+
+.contenido-article img{
+    width: 60rem;
+    height: 30rem;
+    padding-left: 2rem;
+}
+
+.contenido-otros img{
+    height: 30rem;
+    filter: brightness(0.5);
+}
+
+.contenido-otros{
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+
+
+/*FOOTER*/
+footer{
+    background-color: grey;
+    width: 100%;
+    height: 15rem;
+    border-radius:0.5rem;
+    margin-top: 1rem;
+}
+
+.contenido-svg{
+    margin-left: 7rem;
+    margin-top: 5rem;   
+}
+
+.svg p{
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.svg{
+    margin-top: 5rem;
+    margin-left:5rem ;
+}
+
+.svg svg{
+    margin-left: 5rem;
+}
+
+.contenido-footer{
+display: flex;
+}
+
+footer p{
+    padding: 1rem 1rem;
+    color: white;
+}
+
+/**RESPONSIVE**/
+
+@media (max-width:768px ){
+    .header-nav{
+        padding: 3rem 0;
+        justify-content: center;
+    }
+    .header-img{
+        justify-content: center;
+        margin-top: 2rem;
+        }
+    .contenido-article{
+        flex-direction: column;
+    }
+    .contenido-footer{
+        flex-direction: column;
+    }
+    footer{
+        height: 45rem;
+    }
+    .contenido-svg{
+        margin: 0;
+        padding: 0;
+    }
+
+    .contenido-svg p{
+        margin-right: 25rem;
+    }
+}
+
+/*ANIMACIONES*/
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
